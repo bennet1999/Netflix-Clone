@@ -6,6 +6,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background-color: #000;
+}
 
 .container .head{
     position: absolute;
@@ -38,6 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 0.6rem solid rgb(21, 21, 21);
 }
 
 .banner:before{
@@ -145,4 +149,113 @@
     min-width: 210px;
     padding: 0 30px;
 
+}
+
+.part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 0.6rem solid rgb(21, 21, 21);
+}
+
+.part1 .talk{
+    width: 40%;
+}
+
+.part1 .talk h1{
+    font-size: 3.3rem;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.part1 .talk p{
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.part1 .img{
+    width: 45%;
+}
+
+.part1 .img img{
+    width: 100%;
+}
+
+.list{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.list h1{
+    color: #fff;
+    font-size: 3rem;
+    padding: 3rem 0 4rem 0;
+}
+
+.title{
+    background: #303030 ;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.icon{
+    width: 20px;
+    position: relative;
+}
+
+.icon::before, .icon::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    top: -1.5px;
+}
+
+
+.icon::after{
+    transform: rotate(90deg);
+    transition: 0.5s linear;
+
+}
+
+.text{
+    background: #303030 ;
+    margin: 3px 0;  
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 35px;
+    height: 0;
+    opacity: 0;
+}
+
+.item:target .text{
+    opacity: 1;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0;
+    border-top: 2px solid #000;
+    margin-bottom: 6px;
+}
+
+.item:target .icon::after{
+    transform: rotateY(90deg);
 }
